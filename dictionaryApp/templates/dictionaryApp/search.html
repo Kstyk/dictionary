@@ -1,0 +1,27 @@
+{% extends 'dictionaryApp/base.html' %}
+{% block content %}
+<h2 class="text-2xl mb-10">{{ word }}</h2>
+
+<p>
+    <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400 pl-12 mb-10">
+    {% for key, values in meanings.items %}
+        <li>
+            {{ key }}
+        </li>
+        <li>
+            <ul class="pl-8 mt-2 space-y-1 list-decimal list-inside">
+                {% for v in values %}
+                    <li>{{v}}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</p>
+
+<hr>
+
+<p><b>Antonyms</b>: {{ antonyms }}</p>
+<hr>
+<p><b>Synonyms</b>: {{ synonyms }}</p>
+{% endblock content %}

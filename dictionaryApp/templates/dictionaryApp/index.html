@@ -1,0 +1,14 @@
+{% extends 'dictionaryApp/base.html' %}
+
+{% block content %}
+
+<form action="search">
+    <div class="flex space-x-5">
+        <input type="text" name="search" class="form-input border-2 border-fuchsia-300 pl-3" placeholder="search for your word">
+        <div>
+            <button class="bg-fuchsia-50 text-black px-5 py-2" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
